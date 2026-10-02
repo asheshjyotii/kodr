@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <main class="container min-h-screen py-20 md:py-20 ">
+        <div id="task-list" class="min-h-5 w-2xs max-h-100 overflow-y-auto mx-auto md:w-lg border-2 border-gray-500 "></div>
+        <form action="" class="w-2xs md:w-lg mx-auto flex justify-between mt-7"> 
+            <input id="task-input" type="text" class="border-2 border-gray-600 w-60  rounded-md md:w-110 "placeholder="Add tasks">
+            <button class="bg-emerald-700 rounded-sm w-10 md:w-15 text-gray-200  active:bg-lime-500 active:text-gray-100">Add</button>
+        </form>
+    </main>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
