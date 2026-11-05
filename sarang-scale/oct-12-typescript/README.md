@@ -1,0 +1,4 @@
+## Typescript primer
+
+### why typescript?
+### 
