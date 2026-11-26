@@ -1,0 +1,1524 @@
+{
+ "type": "excalidraw",
+ "version": 2,
+ "source": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor",
+ "elements": [
+  {
+   "id": "text0",
+   "type": "text",
+   "x": 40,
+   "y": 20,
+   "width": 806.4,
+   "height": 40,
+   "angle": 0,
+   "strokeColor": "#1971c2",
+   "backgroundColor": "transparent",
+   "fillStyle": "solid",
+   "strokeWidth": 2,
+   "strokeStyle": "solid",
+   "roughness": 1,
+   "opacity": 100,
+   "groupIds": [],
+   "frameId": null,
+   "roundness": null,
+   "seed": 873057300,
+   "version": 2,
+   "versionNonce": 52632222,
+   "isDeleted": false,
+   "boundElements": [],
+   "updated": 1795164735110,
+   "link": null,
+   "locked": false,
+   "text": "Practice: Global Error Handling in Express",
+   "originalText": "Practice: Global Error Handling in Express",
+   "fontSize": 32,
+   "fontFamily": 1,
+   "textAlign": "left",
+   "verticalAlign": "top",
+   "containerId": null,
+   "lineHeight": 1.25,
+   "autoResize": true,
+   "index": "a0"
+  },
+  {
+   "id": "rectangle1",
+   "type": "rectangle",
+   "x": 30,
+   "y": 90,
+   "width": 720,
+   "height": 330,
+   "angle": 0,
+   "strokeColor": "#1e1e1e",
+   "backgroundColor": "#a5d8ff",
+   "fillStyle": "solid",
+   "strokeWidth": 2,
+   "strokeStyle": "solid",
+   "roughness": 1,
+   "opacity": 100,
+   "groupIds": [],
+   "frameId": null,
+   "roundness": {
+    "type": 3
+   },
+   "seed": 868575940,
+   "version": 2,
+   "versionNonce": 136832578,
+   "isDeleted": false,
+   "boundElements": [],
+   "updated": 1795164735110,
+   "link": null,
+   "locked": false,
+   "index": "a1"
+  },
+  {
+   "id": "text2",
+   "type": "text",
+   "x": 50,
+   "y": 105,
+   "width": 633.6,
+   "height": 30,
+   "angle": 0,
+   "strokeColor": "#1e1e1e",
+   "backgroundColor": "transparent",
+   "fillStyle": "solid",
+   "strokeWidth": 2,
+   "strokeStyle": "solid",
+   "roughness": 1,
+   "opacity": 100,
+   "groupIds": [],
+   "frameId": null,
+   "roundness": null,
+   "seed": 567306581,
+   "version": 2,
+   "versionNonce": 1533155038,
+   "isDeleted": false,
+   "boundElements": [],
+   "updated": 1795164735110,
+   "link": null,
+   "locked": false,
+   "text": "Q1 - Basic Global Error Handler + 404 (Easy)",
+   "originalText": "Q1 - Basic Global Error Handler + 404 (Easy)",
+   "fontSize": 24,
+   "fontFamily": 1,
+   "textAlign": "left",
+   "verticalAlign": "top",
+   "containerId": null,
+   "lineHeight": 1.25,
+   "autoResize": true,
+   "index": "a2"
+  },
+  {
+   "id": "text3",
+   "type": "text",
+   "x": 50,
+   "y": 145,
+   "width": 648,
+   "height": 225,
+   "angle": 0,
+   "strokeColor": "#1e1e1e",
+   "backgroundColor": "transparent",
+   "fillStyle": "solid",
+   "strokeWidth": 2,
+   "strokeStyle": "solid",
+   "roughness": 1,
+   "opacity": 100,
+   "groupIds": [],
+   "frameId": null,
+   "roundness": null,
+   "seed": 119118835,
+   "version": 2,
+   "versionNonce": 345361922,
+   "isDeleted": false,
+   "boundElements": [],
+   "updated": 1795164735110,
+   "link": null,
+   "locked": false,
+   "text": "1. Create an Express app with routes:\n   GET /          -> returns \"OK\"\n   GET /crash     -> throws new Error(\"Something broke\")\n2. Add a 404 handler for any unknown route that forwards\n   an error (status 404, \"Route not found\") using next(err).\n3. Write ONE global error middleware (err, req, res, next)\n   at the END of the app that responds with JSON:\n   { success: false, status: <code>, message: <msg> }\n   - Use err.statusCode or default to 500.\nTest: /crash -> 500,  /abc -> 404.",
+   "originalText": "1. Create an Express app with routes:\n   GET /          -> returns \"OK\"\n   GET /crash     -> throws new Error(\"Something broke\")\n2. Add a 404 handler for any unknown route that forwards\n   an error (status 404, \"Route not found\") using next(err).\n3. Write ONE global error middleware (err, req, res, next)\n   at the END of the app that responds with JSON:\n   { success: false, status: <code>, message: <msg> }\n   - Use err.statusCode or default to 500.\nTest: /crash -> 500,  /abc -> 404.",
+   "fontSize": 18,
+   "fontFamily": 1,
+   "textAlign": "left",
+   "verticalAlign": "top",
+   "containerId": null,
+   "lineHeight": 1.25,
+   "autoResize": true,
+   "index": "a3"
+  },
+  {
+   "id": "rectangle4",
+   "type": "rectangle",
+   "x": 30,
+   "y": 450,
+   "width": 720,
+   "height": 355,
+   "angle": 0,
+   "strokeColor": "#1e1e1e",
+   "backgroundColor": "#b2f2bb",
+   "fillStyle": "solid",
+   "strokeWidth": 2,
+   "strokeStyle": "solid",
+   "roughness": 1,
+   "opacity": 100,
+   "groupIds": [],
+   "frameId": null,
+   "roundness": {
+    "type": 3
+   },
+   "seed": 658179037,
+   "version": 2,
+   "versionNonce": 49777438,
+   "isDeleted": false,
+   "boundElements": [],
+   "updated": 1795164735110,
+   "link": null,
+   "locked": false,
+   "index": "a4"
+  },
+  {
+   "id": "text5",
+   "type": "text",
+   "x": 50,
+   "y": 465,
+   "width": 504,
+   "height": 30,
+   "angle": 0,
+   "strokeColor": "#1e1e1e",
+   "backgroundColor": "transparent",
+   "fillStyle": "solid",
+   "strokeWidth": 2,
+   "strokeStyle": "solid",
+   "roughness": 1,
+   "opacity": 100,
+   "groupIds": [],
+   "frameId": null,
+   "roundness": null,
+   "seed": 369994595,
+   "version": 2,
+   "versionNonce": 1919991234,
+   "isDeleted": false,
+   "boundElements": [],
+   "updated": 1795164735111,
+   "link": null,
+   "locked": false,
+   "text": "Q2 - Custom AppError Class (Medium)",
+   "originalText": "Q2 - Custom AppError Class (Medium)",
+   "fontSize": 24,
+   "fontFamily": 1,
+   "textAlign": "left",
+   "verticalAlign": "top",
+   "containerId": null,
+   "lineHeight": 1.25,
+   "autoResize": true,
+   "index": "a5"
+  },
+  {
+   "id": "text6",
+   "type": "text",
+   "x": 50,
+   "y": 505,
+   "width": 712.8,
+   "height": 247.5,
+   "angle": 0,
+   "strokeColor": "#1e1e1e",
+   "backgroundColor": "transparent",
+   "fillStyle": "solid",
+   "strokeWidth": 2,
+   "strokeStyle": "solid",
+   "roughness": 1,
+   "opacity": 100,
+   "groupIds": [],
+   "frameId": null,
+   "roundness": null,
+   "seed": 554650867,
+   "version": 2,
+   "versionNonce": 945059678,
+   "isDeleted": false,
+   "boundElements": [],
+   "updated": 1795164735111,
+   "link": null,
+   "locked": false,
+   "text": "1. Create class AppError extends Error with\n   statusCode, status ('fail' for 4xx, 'error' for 5xx),\n   and isOperational = true.\n2. Route GET /users/:id (use an in-memory array):\n   - id not a number  -> next(new AppError(\"Invalid id\", 400))\n   - user not found   -> next(new AppError(\"User not found\", 404))\n3. Update the global handler:\n   - NODE_ENV=development -> send message + err.stack\n   - NODE_ENV=production  -> operational errors: send message\n                             unknown/bug errors: log it and send\n                             500 \"Something went wrong\" ",
+   "originalText": "1. Create class AppError extends Error with\n   statusCode, status ('fail' for 4xx, 'error' for 5xx),\n   and isOperational = true.\n2. Route GET /users/:id (use an in-memory array):\n   - id not a number  -> next(new AppError(\"Invalid id\", 400))\n   - user not found   -> next(new AppError(\"User not found\", 404))\n3. Update the global handler:\n   - NODE_ENV=development -> send message + err.stack\n   - NODE_ENV=production  -> operational errors: send message\n                             unknown/bug errors: log it and send\n                             500 \"Something went wrong\" ",
+   "fontSize": 18,
+   "fontFamily": 1,
+   "textAlign": "left",
+   "verticalAlign": "top",
+   "containerId": null,
+   "lineHeight": 1.25,
+   "autoResize": true,
+   "index": "a6"
+  },
+  {
+   "id": "rectangle7",
+   "type": "rectangle",
+   "x": 30,
+   "y": 835,
+   "width": 720,
+   "height": 430,
+   "angle": 0,
+   "strokeColor": "#1e1e1e",
+   "backgroundColor": "#ffec99",
+   "fillStyle": "solid",
+   "strokeWidth": 2,
+   "strokeStyle": "solid",
+   "roughness": 1,
+   "opacity": 100,
+   "groupIds": [],
+   "frameId": null,
+   "roundness": {
+    "type": 3
+   },
+   "seed": 681263732,
+   "version": 2,
+   "versionNonce": 2128065922,
+   "isDeleted": false,
+   "boundElements": [],
+   "updated": 1795164735111,
+   "link": null,
+   "locked": false,
+   "index": "a7"
+  },
+  {
+   "id": "text8",
+   "type": "text",
+   "x": 50,
+   "y": 850,
+   "width": 676.8,
+   "height": 30,
+   "angle": 0,
+   "strokeColor": "#1e1e1e",
+   "backgroundColor": "transparent",
+   "fillStyle": "solid",
+   "strokeWidth": 2,
+   "strokeStyle": "solid",
+   "roughness": 1,
+   "opacity": 100,
+   "groupIds": [],
+   "frameId": null,
+   "roundness": null,
+   "seed": 870517684,
+   "version": 2,
+   "versionNonce": 1137302430,
+   "isDeleted": false,
+   "boundElements": [],
+   "updated": 1795164735111,
+   "link": null,
+   "locked": false,
+   "text": "Q3 - Async Errors + Specific Error Types (Hard)",
+   "originalText": "Q3 - Async Errors + Specific Error Types (Hard)",
+   "fontSize": 24,
+   "fontFamily": 1,
+   "textAlign": "left",
+   "verticalAlign": "top",
+   "containerId": null,
+   "lineHeight": 1.25,
+   "autoResize": true,
+   "index": "a8"
+  },
+  {
+   "id": "text9",
+   "type": "text",
+   "x": 50,
+   "y": 890,
+   "width": 615.6,
+   "height": 315,
+   "angle": 0,
+   "strokeColor": "#1e1e1e",
+   "backgroundColor": "transparent",
+   "fillStyle": "solid",
+   "strokeWidth": 2,
+   "strokeStyle": "solid",
+   "roughness": 1,
+   "opacity": 100,
+   "groupIds": [],
+   "frameId": null,
+   "roundness": null,
+   "seed": 832386178,
+   "version": 2,
+   "versionNonce": 453621058,
+   "isDeleted": false,
+   "boundElements": [],
+   "updated": 1795164735111,
+   "link": null,
+   "locked": false,
+   "text": "1. Write a catchAsync(fn) wrapper so async route handlers\n   forward rejected promises to the global handler\n   (no try/catch in routes).\n2. Route POST /orders (async, uses express.json()):\n   - missing \"item\" in body -> throw AppError 400\n   - simulate DB failure with await Promise.reject(...)\n3. In the global handler, map special errors:\n   - Malformed JSON body (SyntaxError, err.type ===\n     'entity.parse.failed') -> 400 \"Invalid JSON\"\n   - err.name === 'ValidationError' -> 422\n   - err.name === 'JsonWebTokenError' -> 401\n4. Add process.on('unhandledRejection') and\n   process.on('uncaughtException') to log & shut down\n   the server gracefully.",
+   "originalText": "1. Write a catchAsync(fn) wrapper so async route handlers\n   forward rejected promises to the global handler\n   (no try/catch in routes).\n2. Route POST /orders (async, uses express.json()):\n   - missing \"item\" in body -> throw AppError 400\n   - simulate DB failure with await Promise.reject(...)\n3. In the global handler, map special errors:\n   - Malformed JSON body (SyntaxError, err.type ===\n     'entity.parse.failed') -> 400 \"Invalid JSON\"\n   - err.name === 'ValidationError' -> 422\n   - err.name === 'JsonWebTokenError' -> 401\n4. Add process.on('unhandledRejection') and\n   process.on('uncaughtException') to log & shut down\n   the server gracefully.",
+   "fontSize": 18,
+   "fontFamily": 1,
+   "textAlign": "left",
+   "verticalAlign": "top",
+   "containerId": null,
+   "lineHeight": 1.25,
+   "autoResize": true,
+   "index": "a9"
+  },
+  {
+   "id": "kasCZYg0BN_uS2i9LQO6q",
+   "type": "freedraw",
+   "x": 42.61658876816597,
+   "y": 217.01901186640208,
+   "width": 34.11312758758643,
+   "height": 36.04128925593602,
+   "angle": 0,
+   "strokeColor": "#e03131",
+   "backgroundColor": "transparent",
+   "fillStyle": "solid",
+   "strokeWidth": 1,
+   "strokeStyle": "solid",
+   "roughness": 1,
+   "opacity": 50,
+   "groupIds": [],
+   "frameId": null,
+   "index": "aB",
+   "roundness": null,
+   "seed": 2142863198,
+   "version": 118,
+   "versionNonce": 971153950,
+   "isDeleted": false,
+   "boundElements": null,
+   "updated": 1795164977904,
+   "link": null,
+   "locked": false,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     -0.2185902398974804
+    ],
+    [
+     0,
+     -0.6655583423744815
+    ],
+    [
+     0,
+     -1.1125264448514827
+    ],
+    [
+     0.08156352234982478,
+     -1.5333942201764899
+    ],
+    [
+     0.18922737185158667,
+     -1.986887404441461
+    ],
+    [
+     0.384979825491115,
+     -2.590457469830085
+    ],
+    [
+     0.7308091602543527,
+     -3.370204743494355
+    ],
+    [
+     1.083163576805532,
+     -4.156477098946539
+    ],
+    [
+     1.4159427479927729,
+     -4.884023718306878
+    ],
+    [
+     1.6769460195122008,
+     -5.406030261345734
+    ],
+    [
+     1.8922737185156961,
+     -5.78448500504885
+    ],
+    [
+     2.202215103444985,
+     -6.127051798918046
+    ],
+    [
+     2.4142802615545236,
+     -6.355429661497567
+    ],
+    [
+     2.5349942746322256,
+     -6.580544983183017
+    ],
+    [
+     2.8579858231375113,
+     -6.812185386656495
+    ],
+    [
+     3.194027535218737,
+     -7.13517693516178
+    ],
+    [
+     3.5398568699819464,
+     -7.47448118813702
+    ],
+    [
+     4.019450381398855,
+     -7.833360686476169
+    ],
+    [
+     4.6360706103634755,
+     -8.335791984151058
+    ],
+    [
+     5.48759378369553,
+     -8.86758614987184
+    ],
+    [
+     6.466356051893314,
+     -9.438530806320557
+    ],
+    [
+     7.379867502211226,
+     -9.996425299193277
+    ],
+    [
+     8.15961477587544,
+     -10.472756269716172
+    ],
+    [
+     8.864323608977855,
+     -10.821848145373394
+    ],
+    [
+     9.438530806320529,
+     -10.97518756739106
+    ],
+    [
+     9.882236367903545,
+     -11.099164121362776
+    ],
+    [
+     10.325941929486532,
+     -11.210090511758494
+    ],
+    [
+     10.90341166772322,
+     -11.353642311094177
+    ],
+    [
+     11.895224099496943,
+     -11.474356324171936
+    ],
+    [
+     13.037113412394348,
+     -11.595070337249638
+    ],
+    [
+     14.19857797065572,
+     -11.71578435032734
+    ],
+    [
+     15.480756541994793,
+     -11.71578435032734
+    ],
+    [
+     16.59654552774026,
+     -11.71578435032734
+    ],
+    [
+     17.448068701072316,
+     -11.67989640049342
+    ],
+    [
+     18.120152125234796,
+     -11.56244492830973
+    ],
+    [
+     18.71067202704745,
+     -11.428680751656032
+    ],
+    [
+     19.281616683496168,
+     -11.255766084274399
+    ],
+    [
+     19.797098144746997,
+     -11.020863139906965
+    ],
+    [
+     20.240803706329984,
+     -10.792485277327444
+    ],
+    [
+     20.684509267912972,
+     -10.531482005808073
+    ],
+    [
+     21.12821482949596,
+     -10.19544029372679
+    ],
+    [
+     21.568657850184962,
+     -9.892023990585528
+    ],
+    [
+     22.01236341176795,
+     -9.555982278504246
+    ],
+    [
+     22.72033478576435,
+     -9.08617638976932
+    ],
+    [
+     23.558807795520437,
+     -8.489131406168724
+    ],
+    [
+     24.159115320015076,
+     -7.771372409490311
+    ],
+    [
+     24.759422844509714,
+     -6.910061613476273
+    ],
+    [
+     25.35646782811034,
+     -5.924774263490519
+    ],
+    [
+     25.8588991257852,
+     -4.7861474914871
+    ],
+    [
+     26.24714149217033,
+     -3.438718102268183
+    ],
+    [
+     26.514669845477727,
+     -1.9281616683496168
+    ],
+    [
+     26.726735003587237,
+     -0.31646646671725875
+    ],
+    [
+     26.87028680292292,
+     1.4746684840846456
+    ],
+    [
+     27.000788438682605,
+     3.2821161393565603
+    ],
+    [
+     27.059514174774478,
+     4.6458582330454306
+    ],
+    [
+     27.059514174774478,
+     5.689871319123085
+    ],
+    [
+     27.059514174774478,
+     6.567494819607077
+    ],
+    [
+     27.059514174774478,
+     7.291778898073403
+    ],
+    [
+     27.059514174774478,
+     7.86924863631009
+    ],
+    [
+     27.059514174774478,
+     8.459768538122773
+    ],
+    [
+     27.059514174774478,
+     9.164477371225189
+    ],
+    [
+     27.059514174774478,
+     9.892023990585528
+    ],
+    [
+     27.059514174774478,
+     10.756597327493523
+    ],
+    [
+     27.059514174774478,
+     11.608120500825578
+    ],
+    [
+     27.059514174774478,
+     12.45964367415769
+    ],
+    [
+     27.01057606136459,
+     13.311166847489744
+    ],
+    [
+     26.716947380905253,
+     14.162690020821799
+    ],
+    [
+     26.224303705912376,
+     15.14471482991354
+    ],
+    [
+     25.663146672145643,
+     16.126739639005336
+    ],
+    [
+     24.97475054351321,
+     17.108764448097077
+    ],
+    [
+     24.100389583923203,
+     18.012488275733062
+    ],
+    [
+     23.239078787909165,
+     18.749822517775385
+    ],
+    [
+     22.51479470944281,
+     19.337079878694055
+    ],
+    [
+     21.78724809008247,
+     19.829723553686904
+    ],
+    [
+     20.929199834962418,
+     20.309317065103812
+    ],
+    [
+     19.77752289938303,
+     20.815010903672658
+    ],
+    [
+     18.12993974791678,
+     21.356592692075424
+    ],
+    [
+     16.14957742526329,
+     21.917749725842157
+    ],
+    [
+     14.172477643503782,
+     22.47890675960889
+    ],
+    [
+     12.316091874822007,
+     23.033538711587653
+    ],
+    [
+     10.446655942564263,
+     23.58817066356636
+    ],
+    [
+     8.270541166271187,
+     23.95683778458755
+    ],
+    [
+     5.918249181702549,
+     24.116702288393185
+    ],
+    [
+     3.569219738027897,
+     24.256991546834854
+    ],
+    [
+     1.3996300435228193,
+     24.325504905608682
+    ],
+    [
+     -0.3784547437031449,
+     24.110177206605158
+    ],
+    [
+     -1.8009225734838878,
+     23.41851853707874
+    ],
+    [
+     -3.2494907304165963,
+     22.270104142393336
+    ],
+    [
+     -4.60997028321151,
+     20.90962458959848
+    ],
+    [
+     -5.575682387833325,
+     19.42516848283185
+    ],
+    [
+     -6.247765811995777,
+     17.96681270321716
+    ],
+    [
+     -6.665371046426827,
+     16.13652726168732
+    ],
+    [
+     -6.936161940628239,
+     14.165952561715812
+    ],
+    [
+     -7.053613412811956,
+     12.541207196507457
+    ],
+    [
+     -7.053613412811956,
+     10.860998636101328
+    ],
+    [
+     -7.053613412811956,
+     9.223203107317033
+    ],
+    [
+     -7.053613412811956,
+     7.784422573066308
+    ],
+    [
+     -6.8741736636423525,
+     6.466356051893285
+    ],
+    [
+     -6.55444465603108,
+     5.158077153402246
+    ],
+    [
+     -6.153152126070012,
+     3.7845474370313923
+    ],
+    [
+     -5.634408123925198,
+     2.4175428024485086
+    ],
+    [
+     -5.034100599430559,
+     1.1223140675334662
+    ],
+    [
+     -4.5055689746037615,
+     -0.019575245363967042
+    ],
+    [
+     -4.1238516900066315,
+     -0.7634345691942599
+    ],
+    [
+     -3.6997213737875825,
+     -1.2397655397171548
+    ],
+    [
+     -2.9558620499572896,
+     -1.9770997817594775
+    ],
+    [
+     -1.5431818428585018,
+     -3.2136027805826757
+    ],
+    [
+     1.1255766084274512,
+     -4.776359868805116
+    ],
+    [
+     4.362017175268079,
+     -6.410892856695398
+    ],
+    [
+     7.4092303702571485,
+     -7.970387404023882
+    ],
+    [
+     10.032313249027197,
+     -9.259091057150954
+    ],
+    [
+     11.559182387415717,
+     -9.986637676511293
+    ],
+    [
+     12.351979824655928,
+     -10.237853325348738
+    ],
+    [
+     12.818523172496867,
+     -10.348779715744456
+    ],
+    [
+     13.056688657758315,
+     -10.410767992730314
+    ],
+    [
+     13.056688657758315,
+     -10.410767992730314
+    ]
+   ],
+   "pressures": [],
+   "simulatePressure": true,
+   "lastCommittedPoint": [
+    13.056688657758315,
+    -10.410767992730314
+   ]
+  },
+  {
+   "id": "exp_text11",
+   "type": "text",
+   "x": 820,
+   "y": 30,
+   "width": 800.8000000000001,
+   "height": 35.0,
+   "angle": 0,
+   "strokeColor": "#e03131",
+   "backgroundColor": "transparent",
+   "fillStyle": "solid",
+   "strokeWidth": 2,
+   "strokeStyle": "solid",
+   "roughness": 1,
+   "opacity": 100,
+   "groupIds": [],
+   "frameId": null,
+   "roundness": null,
+   "seed": 134663948,
+   "version": 1,
+   "versionNonce": 389551940,
+   "isDeleted": false,
+   "boundElements": [],
+   "updated": 1,
+   "link": null,
+   "locked": false,
+   "text": "Explainer: How the 404 \"unknown route\" handler works",
+   "originalText": "Explainer: How the 404 \"unknown route\" handler works",
+   "fontSize": 28,
+   "fontFamily": 1,
+   "textAlign": "left",
+   "verticalAlign": "top",
+   "containerId": null,
+   "lineHeight": 1.25,
+   "autoResize": true
+  },
+  {
+   "id": "exp_rectangle12",
+   "type": "rectangle",
+   "x": 820,
+   "y": 90,
+   "width": 1150,
+   "height": 190.5,
+   "angle": 0,
+   "strokeColor": "#1e1e1e",
+   "backgroundColor": "#ffe3e3",
+   "fillStyle": "solid",
+   "strokeWidth": 2,
+   "strokeStyle": "solid",
+   "roughness": 1,
+   "opacity": 100,
+   "groupIds": [],
+   "frameId": null,
+   "roundness": {
+    "type": 3
+   },
+   "seed": 336168172,
+   "version": 1,
+   "versionNonce": 778399192,
+   "isDeleted": false,
+   "boundElements": [],
+   "updated": 1,
+   "link": null,
+   "locked": false
+  },
+  {
+   "id": "exp_text13",
+   "type": "text",
+   "x": 840,
+   "y": 105,
+   "width": 568.7,
+   "height": 27.5,
+   "angle": 0,
+   "strokeColor": "#1e1e1e",
+   "backgroundColor": "transparent",
+   "fillStyle": "solid",
+   "strokeWidth": 2,
+   "strokeStyle": "solid",
+   "roughness": 1,
+   "opacity": 100,
+   "groupIds": [],
+   "frameId": null,
+   "roundness": null,
+   "seed": 984881482,
+   "version": 1,
+   "versionNonce": 115908890,
+   "isDeleted": false,
+   "boundElements": [],
+   "updated": 1,
+   "link": null,
+   "locked": false,
+   "text": "1) Express runs middleware/routes TOP to BOTTOM",
+   "originalText": "1) Express runs middleware/routes TOP to BOTTOM",
+   "fontSize": 22,
+   "fontFamily": 1,
+   "textAlign": "left",
+   "verticalAlign": "top",
+   "containerId": null,
+   "lineHeight": 1.25,
+   "autoResize": true
+  },
+  {
+   "id": "exp_text14",
+   "type": "text",
+   "x": 840,
+   "y": 145,
+   "width": 891.0000000000001,
+   "height": 112.5,
+   "angle": 0,
+   "strokeColor": "#1e1e1e",
+   "backgroundColor": "transparent",
+   "fillStyle": "solid",
+   "strokeWidth": 2,
+   "strokeStyle": "solid",
+   "roughness": 1,
+   "opacity": 100,
+   "groupIds": [],
+   "frameId": null,
+   "roundness": null,
+   "seed": 257350475,
+   "version": 1,
+   "versionNonce": 73318628,
+   "isDeleted": false,
+   "boundElements": [],
+   "updated": 1,
+   "link": null,
+   "locked": false,
+   "text": "Every request walks down your app in the order you wrote app.use()/app.get().\nThe first handler whose method + path match sends a response, and the request STOPS there.\nIf NOTHING matched, the request \"falls off\" the bottom of your route list.\n-> So: a handler placed AFTER all routes only ever sees requests that no route answered\n   = unknown routes. That is the whole trick. There is no special \"404 feature\".",
+   "originalText": "Every request walks down your app in the order you wrote app.use()/app.get().\nThe first handler whose method + path match sends a response, and the request STOPS there.\nIf NOTHING matched, the request \"falls off\" the bottom of your route list.\n-> So: a handler placed AFTER all routes only ever sees requests that no route answered\n   = unknown routes. That is the whole trick. There is no special \"404 feature\".",
+   "fontSize": 18,
+   "fontFamily": 1,
+   "textAlign": "left",
+   "verticalAlign": "top",
+   "containerId": null,
+   "lineHeight": 1.25,
+   "autoResize": true
+  },
+  {
+   "id": "exp_rectangle15",
+   "type": "rectangle",
+   "x": 820,
+   "y": 305.5,
+   "width": 1150,
+   "height": 383.25,
+   "angle": 0,
+   "strokeColor": "#1e1e1e",
+   "backgroundColor": "#fff3bf",
+   "fillStyle": "solid",
+   "strokeWidth": 2,
+   "strokeStyle": "solid",
+   "roughness": 1,
+   "opacity": 100,
+   "groupIds": [],
+   "frameId": null,
+   "roundness": {
+    "type": 3
+   },
+   "seed": 529560807,
+   "version": 1,
+   "versionNonce": 413937848,
+   "isDeleted": false,
+   "boundElements": [],
+   "updated": 1,
+   "link": null,
+   "locked": false
+  },
+  {
+   "id": "exp_text16",
+   "type": "text",
+   "x": 840,
+   "y": 320.5,
+   "width": 484.00000000000006,
+   "height": 27.5,
+   "angle": 0,
+   "strokeColor": "#1e1e1e",
+   "backgroundColor": "transparent",
+   "fillStyle": "solid",
+   "strokeWidth": 2,
+   "strokeStyle": "solid",
+   "roughness": 1,
+   "opacity": 100,
+   "groupIds": [],
+   "frameId": null,
+   "roundness": null,
+   "seed": 424466050,
+   "version": 1,
+   "versionNonce": 292725793,
+   "isDeleted": false,
+   "boundElements": [],
+   "updated": 1,
+   "link": null,
+   "locked": false,
+   "text": "2) The catch-all: app.use() with NO path",
+   "originalText": "2) The catch-all: app.use() with NO path",
+   "fontSize": 22,
+   "fontFamily": 1,
+   "textAlign": "left",
+   "verticalAlign": "top",
+   "containerId": null,
+   "lineHeight": 1.25,
+   "autoResize": true
+  },
+  {
+   "id": "exp_text17",
+   "type": "text",
+   "x": 840,
+   "y": 360.5,
+   "width": 613.8000000000001,
+   "height": 45.0,
+   "angle": 0,
+   "strokeColor": "#1e1e1e",
+   "backgroundColor": "transparent",
+   "fillStyle": "solid",
+   "strokeWidth": 2,
+   "strokeStyle": "solid",
+   "roughness": 1,
+   "opacity": 100,
+   "groupIds": [],
+   "frameId": null,
+   "roundness": null,
+   "seed": 49304664,
+   "version": 1,
+   "versionNonce": 251050337,
+   "isDeleted": false,
+   "boundElements": [],
+   "updated": 1,
+   "link": null,
+   "locked": false,
+   "text": "app.use(fn) without a path matches EVERY method and EVERY URL.\nPlaced after all routes, it catches only the leftovers:",
+   "originalText": "app.use(fn) without a path matches EVERY method and EVERY URL.\nPlaced after all routes, it catches only the leftovers:",
+   "fontSize": 18,
+   "fontFamily": 1,
+   "textAlign": "left",
+   "verticalAlign": "top",
+   "containerId": null,
+   "lineHeight": 1.25,
+   "autoResize": true
+  },
+  {
+   "id": "exp_text18",
+   "type": "text",
+   "x": 840,
+   "y": 417.5,
+   "width": 785.4,
+   "height": 191.25,
+   "angle": 0,
+   "strokeColor": "#1e1e1e",
+   "backgroundColor": "transparent",
+   "fillStyle": "solid",
+   "strokeWidth": 2,
+   "strokeStyle": "solid",
+   "roughness": 1,
+   "opacity": 100,
+   "groupIds": [],
+   "frameId": null,
+   "roundness": null,
+   "seed": 529839205,
+   "version": 1,
+   "versionNonce": 880860173,
+   "isDeleted": false,
+   "boundElements": [],
+   "updated": 1,
+   "link": null,
+   "locked": false,
+   "text": "app.get('/', (req, res) => res.send('OK'));\napp.get('/crash', () => { throw new Error('Something broke'); });\n\n// 404 catch-all  (MUST be after all routes)\napp.use((req, res, next) => {\n  const err = new Error(`Route not found: ${req.method} ${req.originalUrl}`);\n  err.statusCode = 404;     // attach our own property to the Error object\n  next(err);                // hand it to the error middleware\n});",
+   "originalText": "app.get('/', (req, res) => res.send('OK'));\napp.get('/crash', () => { throw new Error('Something broke'); });\n\n// 404 catch-all  (MUST be after all routes)\napp.use((req, res, next) => {\n  const err = new Error(`Route not found: ${req.method} ${req.originalUrl}`);\n  err.statusCode = 404;     // attach our own property to the Error object\n  next(err);                // hand it to the error middleware\n});",
+   "fontSize": 17,
+   "fontFamily": 3,
+   "textAlign": "left",
+   "verticalAlign": "top",
+   "containerId": null,
+   "lineHeight": 1.25,
+   "autoResize": true
+  },
+  {
+   "id": "exp_text19",
+   "type": "text",
+   "x": 840,
+   "y": 620.75,
+   "width": 811.8000000000001,
+   "height": 45.0,
+   "angle": 0,
+   "strokeColor": "#1e1e1e",
+   "backgroundColor": "transparent",
+   "fillStyle": "solid",
+   "strokeWidth": 2,
+   "strokeStyle": "solid",
+   "roughness": 1,
+   "opacity": 100,
+   "groupIds": [],
+   "frameId": null,
+   "roundness": null,
+   "seed": 587854666,
+   "version": 1,
+   "versionNonce": 207649989,
+   "isDeleted": false,
+   "boundElements": [],
+   "updated": 1,
+   "link": null,
+   "locked": false,
+   "text": "Older tutorials write app.all('*', ...). In Express 5 the bare '*' throws an error\n(it must be '/{*splat}'). Plain app.use(fn) works in both Express 4 and 5.",
+   "originalText": "Older tutorials write app.all('*', ...). In Express 5 the bare '*' throws an error\n(it must be '/{*splat}'). Plain app.use(fn) works in both Express 4 and 5.",
+   "fontSize": 18,
+   "fontFamily": 1,
+   "textAlign": "left",
+   "verticalAlign": "top",
+   "containerId": null,
+   "lineHeight": 1.25,
+   "autoResize": true
+  },
+  {
+   "id": "exp_rectangle20",
+   "type": "rectangle",
+   "x": 820,
+   "y": 713.75,
+   "width": 1150,
+   "height": 235.5,
+   "angle": 0,
+   "strokeColor": "#1e1e1e",
+   "backgroundColor": "#d3f9d8",
+   "fillStyle": "solid",
+   "strokeWidth": 2,
+   "strokeStyle": "solid",
+   "roughness": 1,
+   "opacity": 100,
+   "groupIds": [],
+   "frameId": null,
+   "roundness": {
+    "type": 3
+   },
+   "seed": 625390174,
+   "version": 1,
+   "versionNonce": 449595648,
+   "isDeleted": false,
+   "boundElements": [],
+   "updated": 1,
+   "link": null,
+   "locked": false
+  },
+  {
+   "id": "exp_text21",
+   "type": "text",
+   "x": 840,
+   "y": 728.75,
+   "width": 471.90000000000003,
+   "height": 27.5,
+   "angle": 0,
+   "strokeColor": "#1e1e1e",
+   "backgroundColor": "transparent",
+   "fillStyle": "solid",
+   "strokeWidth": 2,
+   "strokeStyle": "solid",
+   "roughness": 1,
+   "opacity": 100,
+   "groupIds": [],
+   "frameId": null,
+   "roundness": null,
+   "seed": 332394265,
+   "version": 1,
+   "versionNonce": 147841006,
+   "isDeleted": false,
+   "boundElements": [],
+   "updated": 1,
+   "link": null,
+   "locked": false,
+   "text": "3) next() vs next(err): the key concept",
+   "originalText": "3) next() vs next(err): the key concept",
+   "fontSize": 22,
+   "fontFamily": 1,
+   "textAlign": "left",
+   "verticalAlign": "top",
+   "containerId": null,
+   "lineHeight": 1.25,
+   "autoResize": true
+  },
+  {
+   "id": "exp_text22",
+   "type": "text",
+   "x": 840,
+   "y": 768.75,
+   "width": 930.6,
+   "height": 157.5,
+   "angle": 0,
+   "strokeColor": "#1e1e1e",
+   "backgroundColor": "transparent",
+   "fillStyle": "solid",
+   "strokeWidth": 2,
+   "strokeStyle": "solid",
+   "roughness": 1,
+   "opacity": 100,
+   "groupIds": [],
+   "frameId": null,
+   "roundness": null,
+   "seed": 447655010,
+   "version": 1,
+   "versionNonce": 690659027,
+   "isDeleted": false,
+   "boundElements": [],
+   "updated": 1,
+   "link": null,
+   "locked": false,
+   "text": "next()      -> \"I'm done, go to the NEXT normal middleware/route.\"\nnext(err)   -> \"Something went wrong\": Express SKIPS all normal middleware\n               and jumps straight to the first ERROR middleware.\nHow does Express know which one is the error middleware? By the number of parameters.\n  (req, res, next)       = 3 params -> normal middleware\n  (err, req, res, next)  = 4 params -> error middleware (you MUST write all 4, even if unused)\nThrowing inside a sync route (like /crash) does the same thing as next(err).",
+   "originalText": "next()      -> \"I'm done, go to the NEXT normal middleware/route.\"\nnext(err)   -> \"Something went wrong\": Express SKIPS all normal middleware\n               and jumps straight to the first ERROR middleware.\nHow does Express know which one is the error middleware? By the number of parameters.\n  (req, res, next)       = 3 params -> normal middleware\n  (err, req, res, next)  = 4 params -> error middleware (you MUST write all 4, even if unused)\nThrowing inside a sync route (like /crash) does the same thing as next(err).",
+   "fontSize": 18,
+   "fontFamily": 1,
+   "textAlign": "left",
+   "verticalAlign": "top",
+   "containerId": null,
+   "lineHeight": 1.25,
+   "autoResize": true
+  },
+  {
+   "id": "exp_rectangle23",
+   "type": "rectangle",
+   "x": 820,
+   "y": 974.25,
+   "width": 1150,
+   "height": 269.25,
+   "angle": 0,
+   "strokeColor": "#1e1e1e",
+   "backgroundColor": "#d0ebff",
+   "fillStyle": "solid",
+   "strokeWidth": 2,
+   "strokeStyle": "solid",
+   "roughness": 1,
+   "opacity": 100,
+   "groupIds": [],
+   "frameId": null,
+   "roundness": {
+    "type": 3
+   },
+   "seed": 736334924,
+   "version": 1,
+   "versionNonce": 640086454,
+   "isDeleted": false,
+   "boundElements": [],
+   "updated": 1,
+   "link": null,
+   "locked": false
+  },
+  {
+   "id": "exp_text24",
+   "type": "text",
+   "x": 840,
+   "y": 989.25,
+   "width": 556.6,
+   "height": 27.5,
+   "angle": 0,
+   "strokeColor": "#1e1e1e",
+   "backgroundColor": "transparent",
+   "fillStyle": "solid",
+   "strokeWidth": 2,
+   "strokeStyle": "solid",
+   "roughness": 1,
+   "opacity": 100,
+   "groupIds": [],
+   "frameId": null,
+   "roundness": null,
+   "seed": 333895302,
+   "version": 1,
+   "versionNonce": 529388678,
+   "isDeleted": false,
+   "boundElements": [],
+   "updated": 1,
+   "link": null,
+   "locked": false,
+   "text": "4) The global error handler (the LAST app.use)",
+   "originalText": "4) The global error handler (the LAST app.use)",
+   "fontSize": 22,
+   "fontFamily": 1,
+   "textAlign": "left",
+   "verticalAlign": "top",
+   "containerId": null,
+   "lineHeight": 1.25,
+   "autoResize": true
+  },
+  {
+   "id": "exp_text25",
+   "type": "text",
+   "x": 840,
+   "y": 1029.25,
+   "width": 703.8,
+   "height": 191.25,
+   "angle": 0,
+   "strokeColor": "#1e1e1e",
+   "backgroundColor": "transparent",
+   "fillStyle": "solid",
+   "strokeWidth": 2,
+   "strokeStyle": "solid",
+   "roughness": 1,
+   "opacity": 100,
+   "groupIds": [],
+   "frameId": null,
+   "roundness": null,
+   "seed": 509272216,
+   "version": 1,
+   "versionNonce": 860557269,
+   "isDeleted": false,
+   "boundElements": [],
+   "updated": 1,
+   "link": null,
+   "locked": false,
+   "text": "app.use((err, req, res, next) => {\n  const status = err.statusCode || 500;  // 404 from step 2, else 500\n  res.status(status).json({\n    success: false,\n    status,\n    message: err.message || 'Internal Server Error',\n  });\n});\napp.listen(3000);",
+   "originalText": "app.use((err, req, res, next) => {\n  const status = err.statusCode || 500;  // 404 from step 2, else 500\n  res.status(status).json({\n    success: false,\n    status,\n    message: err.message || 'Internal Server Error',\n  });\n});\napp.listen(3000);",
+   "fontSize": 17,
+   "fontFamily": 3,
+   "textAlign": "left",
+   "verticalAlign": "top",
+   "containerId": null,
+   "lineHeight": 1.25,
+   "autoResize": true
+  },
+  {
+   "id": "exp_rectangle26",
+   "type": "rectangle",
+   "x": 820,
+   "y": 1268.5,
+   "width": 1150,
+   "height": 303.0,
+   "angle": 0,
+   "strokeColor": "#1e1e1e",
+   "backgroundColor": "#e5dbff",
+   "fillStyle": "solid",
+   "strokeWidth": 2,
+   "strokeStyle": "solid",
+   "roughness": 1,
+   "opacity": 100,
+   "groupIds": [],
+   "frameId": null,
+   "roundness": {
+    "type": 3
+   },
+   "seed": 882785717,
+   "version": 1,
+   "versionNonce": 583138884,
+   "isDeleted": false,
+   "boundElements": [],
+   "updated": 1,
+   "link": null,
+   "locked": false
+  },
+  {
+   "id": "exp_text27",
+   "type": "text",
+   "x": 840,
+   "y": 1283.5,
+   "width": 387.20000000000005,
+   "height": 27.5,
+   "angle": 0,
+   "strokeColor": "#1e1e1e",
+   "backgroundColor": "transparent",
+   "fillStyle": "solid",
+   "strokeWidth": 2,
+   "strokeStyle": "solid",
+   "roughness": 1,
+   "opacity": 100,
+   "groupIds": [],
+   "frameId": null,
+   "roundness": null,
+   "seed": 393820439,
+   "version": 1,
+   "versionNonce": 380742446,
+   "isDeleted": false,
+   "boundElements": [],
+   "updated": 1,
+   "link": null,
+   "locked": false,
+   "text": "5) Full flow and order checklist",
+   "originalText": "5) Full flow and order checklist",
+   "fontSize": 22,
+   "fontFamily": 1,
+   "textAlign": "left",
+   "verticalAlign": "top",
+   "containerId": null,
+   "lineHeight": 1.25,
+   "autoResize": true
+  },
+  {
+   "id": "exp_text28",
+   "type": "text",
+   "x": 840,
+   "y": 1323.5,
+   "width": 1029.6000000000001,
+   "height": 225.0,
+   "angle": 0,
+   "strokeColor": "#1e1e1e",
+   "backgroundColor": "transparent",
+   "fillStyle": "solid",
+   "strokeWidth": 2,
+   "strokeStyle": "solid",
+   "roughness": 1,
+   "opacity": 100,
+   "groupIds": [],
+   "frameId": null,
+   "roundness": null,
+   "seed": 95331718,
+   "version": 1,
+   "versionNonce": 438735882,
+   "isDeleted": false,
+   "boundElements": [],
+   "updated": 1,
+   "link": null,
+   "locked": false,
+   "text": "GET /abc  ->  '/' ? no  ->  '/crash' ? no  ->  404 catch-all  --next(err)-->  error handler -> 404 JSON\nGET /crash -> '/crash' matches -> throws  --------(skips 404 catch-all)------> error handler -> 500 JSON\n\nOrder in your file:   1. app.use(express.json())  2. your routes\n                      3. 404 catch-all (3 params) 4. error handler (4 params)  5. app.listen()\nCommon mistakes:\n x 404 handler placed ABOVE routes   -> every request returns 404\n x error handler written with 3 params -> Express treats it as normal middleware\n x calling res.status(404).send() directly works, but skips your central JSON format;\n   next(err) keeps ALL error responses in ONE place (that's why it's called \"global\").",
+   "originalText": "GET /abc  ->  '/' ? no  ->  '/crash' ? no  ->  404 catch-all  --next(err)-->  error handler -> 404 JSON\nGET /crash -> '/crash' matches -> throws  --------(skips 404 catch-all)------> error handler -> 500 JSON\n\nOrder in your file:   1. app.use(express.json())  2. your routes\n                      3. 404 catch-all (3 params) 4. error handler (4 params)  5. app.listen()\nCommon mistakes:\n x 404 handler placed ABOVE routes   -> every request returns 404\n x error handler written with 3 params -> Express treats it as normal middleware\n x calling res.status(404).send() directly works, but skips your central JSON format;\n   next(err) keeps ALL error responses in ONE place (that's why it's called \"global\").",
+   "fontSize": 18,
+   "fontFamily": 1,
+   "textAlign": "left",
+   "verticalAlign": "top",
+   "containerId": null,
+   "lineHeight": 1.25,
+   "autoResize": true
+  },
+  {
+   "id": "exp_arrow29",
+   "type": "arrow",
+   "x": 80,
+   "y": 235,
+   "width": 730,
+   "height": -120,
+   "angle": 0,
+   "strokeColor": "#e03131",
+   "backgroundColor": "transparent",
+   "fillStyle": "solid",
+   "strokeWidth": 2,
+   "strokeStyle": "solid",
+   "roughness": 1,
+   "opacity": 100,
+   "groupIds": [],
+   "frameId": null,
+   "roundness": {
+    "type": 2
+   },
+   "seed": 815911466,
+   "version": 1,
+   "versionNonce": 175708966,
+   "isDeleted": false,
+   "boundElements": [],
+   "updated": 1,
+   "link": null,
+   "locked": false,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     730,
+     -120
+    ]
+   ],
+   "lastCommittedPoint": null,
+   "startBinding": null,
+   "endBinding": null,
+   "startArrowhead": null,
+   "endArrowhead": "arrow"
+  }
+ ],
+ "appState": {
+  "gridSize": 20,
+  "gridStep": 5,
+  "gridModeEnabled": false,
+  "viewBackgroundColor": "#ffffff"
+ },
+ "files": {}
+}

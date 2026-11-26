@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Socket.IO Basics - Beginner Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #f8fafc;
+      max-width: 650px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+    .box {
+      background: #1e293b;
+      padding: 16px;
+      border-radius: 10px;
+      margin-bottom: 16px;
+    }
+    input {
+      padding: 9px;
+      width: 60%;
+      border-radius: 6px;
+      border: 1px solid #475569;
+      background: #0f172a;
+      color: #fff;
+    }
+    button {
+      padding: 9px 14px;
+      border: none;
+      border-radius: 6px;
+      background: #2563eb;
+      color: #fff;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 6px;
+    }
+    #messages {
+      background: #020617;
+      padding: 12px;
+      border-radius: 8px;
+      height: 220px;
+      overflow-y: auto;
+      font-size: 14px;
+    }
+    .msg {
+      padding: 6px 8px;
+      border-bottom: 1px solid #1e293b;
+    }
+  </style>
+  <!-- Socket.IO automatically client library yahan serve karta hai -->
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+  <h2>⚡ Socket.IO Basics Demo</h2>
+  <p id="my-id">Connecting...</p>
+
+  <!-- 1. Global & Broadcast Section -->
+  <div class="box">
+    <h3>1. Global Chat & Broadcast</h3>
+    <input id="msgInput" type="text" placeholder="Type a message..." />
+    <br />
+    <button onclick="sendToAll()">Send to All (io.emit)</button>
+    <button onclick="sendBroadcast()" style="background: #d97706;">Broadcast (Except Me)</button>
+  </div>
+
+  <!-- 2. Rooms Section -->
+  <div class="box">
+    <h3>2. Rooms (Group Chat)</h3>
+    <input id="roomInput" type="text" value="room-1" placeholder="Room name" />
+    <button onclick="joinRoom()" style="background: #059669;">Join Room</button>
+    <button onclick="leaveRoom()" style="background: #dc2626;">Leave Room</button>
+    <br /><br />
+    <input id="roomMsgInput" type="text" placeholder="Message for this room..." />
+    <button onclick="sendToRoom()">Send to Room (io.to)</button>
+  </div>
+
+  <!-- 3. Messages Box -->
+  <div class="box">
+    <h3>Messages</h3>
+    <div id="messages"></div>
+  </div>
+
+  <script>
+    // Server se connect karo
+    const socket = io();
+
+    const myIdEl = document.getElementById('my-id');
+    const messagesBox = document.getElementById('messages');
+
+    // Jab connect ho jaye toh apni ID screen par dikhao
+    socket.on('connect', () => {
+      myIdEl.innerText = '✅ Connected! My Socket ID: ' + socket.id;
+    });
+
+    // Server se jab bhi 'message' event aaye, screen par add karo
+    socket.on('message', (text) => {
+      const div = document.createElement('div');
+      div.className = 'msg';
+      div.innerText = text;
+      messagesBox.appendChild(div);
+      messagesBox.scrollTop = messagesBox.scrollHeight;
+    });
+
+    // 1. Sabko bhejo (io.emit)
+    function sendToAll() {
+      const input = document.getElementById('msgInput');
+      if (!input.value.trim()) return;
+      socket.emit('send-to-all', input.value);
+      input.value = '';
+    }
+
+    // 2. Mujhe nnn nnjr    kiska chakkar hain babu bhaiya... baaki sabko bhejo (socket.broadcast.emit)
+    function sendBroadcast() { 
+      const input = document.getElementById('msgInput');
+      if (!input.value.trim()) return;
+      socket.emit('send-broadcast', input.value);
+      input.value = '';
+    }
+
+    // 3. Room join karo
+    function joinRoom() {
+      const roomName = document.getElementById('roomInput').value.trim();
+      if (!roomName) return;
+      socket.emit('join-room', roomName);
+    }
+
+    // 4. Room chhodo
+    function leaveRoom() {
+      const roomName = document.getElementById('roomInput').value.trim();
+      if (!roomName) return;
+      socket.emit('leave-room', roomName);
+    }
+
+    // 5. Sirf Room me message bhejo (io.to)
+    function sendToRoom() {
+      const roomName = document.getElementById('roomInput').value.trim();
+      const input = document.getElementById('roomMsgInput');
+      if (!roomName || !input.value.trim()) return;
+      socket.emit('send-to-room', { roomName, text: input.value });
+      input.value = '';
+    }
+  </script>
+</body>
+</html>
